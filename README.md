@@ -1,6 +1,6 @@
 # これなに？
 
-Mattermost用のHubot
+Mattermost 用の Hubot
 
 # 必要なもの
 
@@ -39,12 +39,19 @@ docker-compose で起動します。
 
 ## hubot-reload-scripts
 
-Hubotを再起動せずにスクリプトだけ読み込みます。
-Mattermostから `@bot reload` で読み込ませることができます。
+Hubot を再起動せずにスクリプトだけ読み込みます。
+Mattermost から `@bot reload` で読み込ませることができます。
 
 # オリジナルスクリプト
 
 スクリプトの言語は Coffee Script です。
 以下に .coffee を置いてください。
 
-* ./volumes/scripts
+* ./volumes/scripts/
+
+## brain
+
+brain に Redis を使用して永続化します。
+Redis のデータは以下に保存されます。
+
+* ./volumes/redis/
