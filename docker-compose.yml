@@ -10,6 +10,7 @@ services:
   app:
     restart: always
     build: app
+    container_name: hubot
     depends_on:
       - db
     ports:
@@ -23,3 +24,10 @@ services:
       - REDIS_URL=redis://db:6379
     links:
       - db
+    networks:
+      - default
+      - mynetwork
+
+networks:
+  mynetwork:
+    external: true
